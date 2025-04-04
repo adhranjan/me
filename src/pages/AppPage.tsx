@@ -4,9 +4,11 @@ import { motion } from "framer-motion";
 import {Mail, MapPin, Share2 } from "lucide-react";
 import GitApp from "./apps/GitApp";
 import { AppScreen } from "../components/device/AppScreen";
-import { USER_INFO, GALLERY_ITEMS } from "../lib/constants";
+import { USER_INFO, GALLERY_ITEMS, PLACES_I_WENT } from "../lib/constants";
 import { Button } from "../components/ui/button";
 import YoutubeApp from "./apps/YoutubeApp";
+import PdfViewer from "./apps/PdfViewer";
+
 
 // About app content
 const AboutApp: React.FC = () => {
@@ -273,7 +275,7 @@ const MapApp: React.FC = () => {
         </div>
         
         {/* Location pins */}
-        {GALLERY_ITEMS.map((item) => {
+        {PLACES_I_WENT.map((item) => {
           const coords = getCoordinates(item.id);
           return (
             <div
@@ -319,7 +321,7 @@ const MapApp: React.FC = () => {
       {/* Locations list */}
       <h3 className="font-medium mb-2 text-gray-700">Visited Locations</h3>
       <div className="space-y-2">
-        {GALLERY_ITEMS.map((item) => (
+        {PLACES_I_WENT.map((item) => (
           <div 
             key={item.id} 
             className={`flex items-center p-3 border rounded-lg transition-colors cursor-pointer ${
@@ -345,14 +347,14 @@ const MapApp: React.FC = () => {
 const SocialApp: React.FC = () => {
   const platformIcons: { [key: string]: React.ReactNode } = {
     facebook: <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M9.19795 21.5H13.198V13.4901H16.8021L17.198 9.50977H13.198V7.5C13.198 6.94772 13.6457 6.5 14.198 6.5H17.198V2.5H14.198C11.4365 2.5 9.19795 4.73858 9.19795 7.5V9.50977H7.19795L6.80206 13.4901H9.19795V21.5Z" /></svg>,
-    twitter: <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52833 8.31345 7.04329 7.56059C5.55824 6.80773 4.24813 5.75098 3.198 4.45893C2.82629 5.09738 2.63095 5.82315 2.632 6.56193C2.632 8.01193 3.37 9.29293 4.492 10.0429C3.82802 10.022 3.17864 9.84271 2.598 9.51993V9.57193C2.5985 10.5376 2.93236 11.4735 3.54399 12.221C4.15563 12.9684 5.00524 13.4814 5.953 13.6729C5.33669 13.84 4.69031 13.8646 4.063 13.7449C4.32986 14.5762 4.85 15.3031 5.55059 15.824C6.25118 16.345 7.09718 16.6337 7.97 16.6499C7.10252 17.3313 6.10917 17.8349 5.04689 18.1321C3.98462 18.4293 2.87392 18.5142 1.779 18.3819C3.6907 19.6114 5.91599 20.264 8.189 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" /></svg>,
+    github: <svg width="64px" height="64px" viewBox="0 -3.5 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="#161614"> <path d="M127.505 0C57.095 0 0 57.085 0 127.505c0 56.336 36.534 104.13 87.196 120.99 6.372 1.18 8.712-2.766 8.712-6.134 0-3.04-.119-13.085-.173-23.739-35.473 7.713-42.958-15.044-42.958-15.044-5.8-14.738-14.157-18.656-14.157-18.656-11.568-7.914.872-7.752.872-7.752 12.804.9 19.546 13.14 19.546 13.14 11.372 19.493 29.828 13.857 37.104 10.6 1.144-8.242 4.449-13.866 8.095-17.05-28.32-3.225-58.092-14.158-58.092-63.014 0-13.92 4.981-25.295 13.138-34.224-1.324-3.212-5.688-16.18 1.235-33.743 0 0 10.707-3.427 35.073 13.07 10.17-2.826 21.078-4.242 31.914-4.29 10.836.048 21.752 1.464 31.942 4.29 24.337-16.497 35.029-13.07 35.029-13.07 6.94 17.563 2.574 30.531 1.25 33.743 8.175 8.929 13.122 20.303 13.122 34.224 0 48.972-29.828 59.756-58.22 62.912 4.573 3.957 8.648 11.717 8.648 23.612 0 17.06-.148 30.791-.148 34.991 0 3.393 2.295 7.369 8.759 6.117 50.634-16.879 87.122-64.656 87.122-120.973C255.009 57.085 197.922 0 127.505 0"></path> <path d="M47.755 181.634c-.28.633-1.278.823-2.185.389-.925-.416-1.445-1.28-1.145-1.916.275-.652 1.273-.834 2.196-.396.927.415 1.455 1.287 1.134 1.923M54.027 187.23c-.608.564-1.797.302-2.604-.589-.834-.889-.99-2.077-.373-2.65.627-.563 1.78-.3 2.616.59.834.899.996 2.08.36 2.65M58.33 194.39c-.782.543-2.06.034-2.849-1.1-.781-1.133-.781-2.493.017-3.038.792-.545 2.05-.055 2.85 1.07.78 1.153.78 2.513-.019 3.069M65.606 202.683c-.699.77-2.187.564-3.277-.488-1.114-1.028-1.425-2.487-.724-3.258.707-.772 2.204-.555 3.302.488 1.107 1.026 1.445 2.496.7 3.258M75.01 205.483c-.307.998-1.741 1.452-3.185 1.028-1.442-.437-2.386-1.607-2.095-2.616.3-1.005 1.74-1.478 3.195-1.024 1.44.435 2.386 1.596 2.086 2.612M85.714 206.67c.036 1.052-1.189 1.924-2.705 1.943-1.525.033-2.758-.818-2.774-1.852 0-1.062 1.197-1.926 2.721-1.951 1.516-.03 2.758.815 2.758 1.86M96.228 206.267c.182 1.026-.872 2.08-2.377 2.36-1.48.27-2.85-.363-3.039-1.38-.184-1.052.89-2.105 2.367-2.378 1.508-.262 2.857.355 3.049 1.398"></path> </g> </g></svg>,
     instagram: <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" /></svg>,
     linkedin: <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5.00002C6.94 5.53002 6.81 5.96002 6.56 6.30002C6.31 6.63002 5.91 6.80002 5.35 6.80002H5.33C4.78 6.80002 4.36 6.63002 4.08 6.30002C3.8 5.96002 3.66 5.53002 3.66 5.00002C3.66 4.47002 3.81 4.03002 4.1 3.69002C4.39 3.35002 4.81 3.18002 5.37 3.18002C5.93 3.18002 6.34 3.35002 6.61 3.69002C6.89 4.03002 7.03 4.47002 6.94 5.00002ZM6.94 18H3.82V8.00002H6.94V18ZM13.73 18H16.66V12.31C16.66 9.40002 15.14 7.97002 13.15 7.97002C12.94 7.96421 12.7289 7.99428 12.5305 8.05814C12.3322 8.12201 12.1511 8.21853 11.9979 8.34175C11.8448 8.46496 11.7232 8.61234 11.6405 8.77691C11.5578 8.94147 11.5156 9.11952 11.5166 9.30002V9.30002H11.48V8.00002H8.64C8.69 8.93002 8.64 18 8.64 18H11.56V12.67C11.56 12.4 11.59 12.2 11.64 12.05C11.75 11.78 11.93 11.55 12.18 11.36C12.42 11.17 12.72 11.08 13.08 11.08C14.02 11.08 14.53 11.8 14.53 12.96V18H13.73Z" /></svg>
   };
   
   const platformColors: { [key: string]: string } = {
     facebook: "#1877F2",  // Facebook blue
-    twitter: "#1DA1F2",   // Twitter blue
+    github: "#333",   // github black
     instagram: "#E4405F", // Instagram pink
     linkedin: "#0A66C2"   // LinkedIn blue
   };
@@ -388,7 +390,7 @@ const SocialApp: React.FC = () => {
         ))}
       </div>
       
-      <div className="space-y-4">
+      {/* <div className="space-y-4">
         <h3 className="font-medium text-gray-700">Quick Links</h3>
         {Object.entries(USER_INFO.social).map(([platform, url], index) => (
           <motion.a 
@@ -409,11 +411,10 @@ const SocialApp: React.FC = () => {
             </div>
             <div>
               <div className="font-medium capitalize">{platform}</div>
-              <div className="text-sm text-gray-500">@johndoe</div>
             </div>
           </motion.a>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -422,54 +423,11 @@ const SocialApp: React.FC = () => {
 const ResumeApp: React.FC = () => {
   return (
     <div className="p-6 space-y-6">
-      <div className="text-center mb-8">
-        <h1 className="text-2xl font-bold">{USER_INFO.fullName}</h1>
-        <p className="text-gray-500">{USER_INFO.tagline}</p>
-        <p className="flex items-center justify-center mt-1 text-sm text-gray-500">
-          <MapPin className="w-4 h-4 mr-1" /> {USER_INFO.location}
-        </p>
+    
+          <PdfViewer url="https://ranjan.fyi/Ranjan_Adhikari_Resume_Senior_Backend_Engineer.pdf">
+          </PdfViewer>
+    
       </div>
-      
-      <div>
-        <h2 className="text-lg font-semibold border-b pb-2 mb-4">Experience</h2>
-        <div className="space-y-4">
-          <div>
-            <h3 className="font-medium">Senior Photographer</h3>
-            <p className="text-primary">Travel Magazine</p>
-            <p className="text-sm text-gray-500">2018 - Present</p>
-            <p className="mt-2 text-sm">Capturing stunning travel photography for print and digital publications.</p>
-          </div>
-          <div>
-            <h3 className="font-medium">Content Creator</h3>
-            <p className="text-primary">Freelance</p>
-            <p className="text-sm text-gray-500">2016 - Present</p>
-            <p className="mt-2 text-sm">Creating content for various brands and tourism boards.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div>
-        <h2 className="text-lg font-semibold border-b pb-2 mb-4">Education</h2>
-        <div>
-          <h3 className="font-medium">Bachelor of Fine Arts in Photography</h3>
-          <p className="text-primary">Art Institute</p>
-          <p className="text-sm text-gray-500">2012 - 2016</p>
-        </div>
-      </div>
-      
-      <div>
-        <h2 className="text-lg font-semibold border-b pb-2 mb-4">Skills</h2>
-        <div className="flex flex-wrap gap-2">
-          {["Photography", "Editing", "Content Creation", "Social Media", "Travel Planning", "Storytelling"].map((skill) => (
-            <span key={skill} className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-      
-      <Button className="w-full">Download PDF</Button>
-    </div>
   );
 };
 

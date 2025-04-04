@@ -1,26 +1,25 @@
 export const USER_INFO = {
   name: "Ranjan",
   fullName: "Ranjan Adhikari",
-  tagline: "Traveler • Photographer • Story Teller",
+  tagline: "I am only after all.",
   intro: "I share my adventures, photography, and stories from around the world. Join me as I explore new places and create unforgettable memories.",
-  profileImage: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-  location: "San Francisco, CA",
+  profileImage: "https://ranjan.fyi/355657861_116374001493449_6314419675551890923_n.jpeg",
+  location: "Kathmandu, Nepal",
   email: "adh.ranjan@gmail.com",
-  aboutParagraph1: "Hello! I'm a passionate traveler and photographer based in San Francisco, California. For the past 5 years, I've been documenting my journeys across 30+ countries, capturing moments and sharing stories that inspire others to explore the world.",
-  aboutParagraph2: "When I'm not traveling, I work as a freelance photographer and content creator. My work has been featured in several travel magazines and blogs. I believe in sustainable travel and always try to leave a positive impact on the places I visit.",
-  aboutParagraph3: "Through this website, I share my experiences, photography tips, and travel guides to help fellow travelers plan their adventures. Feel free to reach out if you have questions or just want to connect!",
-  interests: ["Travel", "Photography", "Hiking", "Cooking"],
+  aboutParagraph1: "With 6+ years in software development, I specialize in backend technologies like Node.js and NestJS, always striving for efficient, scalable solutions.",
+  aboutParagraph2: "Traveling fuels my creativity, offering fresh perspectives and inspiring both my personal growth and professional work.",
+  aboutParagraph3: "When I'm not coding or traveling, I enjoy diving into computer games, exploring new worlds, and sharpening my strategic thinking.",
+  interests: ["Travel", "Photography", "Coding", "I Go to gym"],
   stats: {
-    countries: "30+",
-    cities: "120+",
-    photos: "10k+",
-    years: "5+"
+    Alawys: "😀",
+    "Resolving the merge Conflict": "🤬",
+    Likes: "🤬",
   },
   social: {
     facebook: "https://www.facebook.com/profile.php?id=100070361946323",
-    twitter: "https://twitter.com/johndoe",
-    instagram: "https://instagram.com/johndoe",
-    linkedin: "https://www.linkedin.com/in/ranjan-adhikari/"
+    github: "https://github.com/adhranjan",
+    instagram: "https://www.instagram.com/adh.ranjan/",
+    linkedin: "https://www.linkedin.com/in/adh-ranjan/"
   }
 };
 
@@ -87,80 +86,93 @@ export const GALLERY_ITEMS = [
   {
     image:"https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     id: 1,
-    title: "Dubai",
-    location: "Dubai, UAE",
-    category: "Eupore",
-    description: "A modern metropolis in the United Arab Emirates",
+    title: "Aquarium",
+    location: "Planted Tanks",
+    category: "Hobby",
+    description: "A serene collection of planted aquariums where nature thrives underwater — each tank a living canvas of green, flowing life, and tranquil beauty.",
     images: [
       {
-        id: "dubai-1",
-        url: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        caption: "Burj Khalifa - The tallest building in the world"
+        id: "aquarium-1",
+        url: "https://ranjan.fyi/20240222_105558.jpg",
+        caption: "Nature’s tranquility, right in my room 🌿🐠 #PlantedTank #AquascapeVibes"
       },
       {
-        id: "dubai-2",
-        url: "https://images.unsplash.com/photo-1526495124232-a04e1849168c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        caption: "Palm Jumeirah - Artificial archipelago"
+        id: "aquarium-2",
+        url: "https://ranjan.fyi/20231226_135345.jpg",
+        caption: "Little jungle, big peace. My underwater garden in full bloom 🌱🌊 #AquariumLife #GreenAquascape"
       },
       {
-        id: "dubai-3",
-        url: "https://images.unsplash.com/photo-1582672752793-08d00be4b394?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        caption: "Dubai Marina - Artificial canal city"
+        id: "aquarium-3",
+        url: "https://ranjan.fyi/20240222_105657.jpg",
+        caption: "Where art meets nature — my planted paradise beneath the surface 🍃✨ #AquariumGoals #PlantedAquarium"
       }
     ],
-    thumbnailIndex: 0 // Use the first image as the thumbnail
+    thumbnailIndex: 2 // Use the first image as the thumbnail
   },
   {
     image:"https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     id: 2,
-    title: "Singapore",
-    location: "Singapore",
-    category: "Asia",
-    description: "A sovereign island city-state in Southeast Asia",
+    title: "Mirror Selfie",
+    location: "Kathmandu/Bangalore",
+    category: "Selfie",
+    description: "Double tap for each reflection 🔥",
     images: [
       {
-        id: "singapore-1",
-        url: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        caption: "Marina Bay Sands - Iconic integrated resort"
+        id: "mirror-selfie-1",
+        url: "https://ranjan.fyi/20240417_181258.jpg",
+        caption: "Just making sure the mirror gets all my angles 😉🪞🖤"
       },
       {
-        id: "singapore-2",
-        url: "https://images.unsplash.com/photo-1565967511849-76a60a516170?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        caption: "Gardens by the Bay - Nature park in central Singapore"
+        id: "mirror-selfie-2",
+        url: "https://ranjan.fyi/IMG_20190525_091616.jpg",
+        caption: "Same mirror, different energy ⚡🪞"
       },
       {
-        id: "singapore-3",
-        url: "https://images.unsplash.com/photo-1566460414244-8918c41689de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        caption: "Singapore Skyline - Financial district view"
+        id: "mirror-selfie-3",
+        url: "https://ranjan.fyi/IMG_20220101_125511.jpg",
+        caption: "1 main character 💫"
+      },
+      {
+        id: "mirror-selfie-3",
+        url: "https://ranjan.fyi/IMG_20190626_202209.jpg",
+        caption: "Stacked up selfies, because why not? 😏"
       }
+
+      
     ],
     thumbnailIndex: 0
   },
   {
     image:"https://images.unsplash.com/photo-1587135941948-670b381f08ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     id: 3,
-    title: "India",
-    location: "Agra, India",
-    category: "Asia",
-    description: "Home to one of the seven wonders of the world",
+    title: "Chess",
+    location: "Kapan",
+    category: "Hobby",
+    description: "Checkmate!!",
     images: [
       {
-        id: "india-1",
-        url: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        caption: "Taj Mahal - Iconic ivory-white marble mausoleum"
+        id: "chess-1",
+        url: "https://ranjan.fyi/476230623_122132624078480136_8518461814049588463_n.jpg",
+        caption: "Every move tells a story — welcome to the chess battlefield"
       },
       {
-        id: "india-2",
-        url: "https://images.unsplash.com/photo-1587135941948-670b381f08ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        caption: "Hawa Mahal - Palace of Winds in Jaipur"
+        id: "chess-2",
+        url: "https://ranjan.fyi/476518880_122132623754480136_1480272086601892882_n.jpg",
+        caption: "In chess, patience is as important as strategy"
       },
       {
-        id: "india-3",
-        url: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-        caption: "Golden Temple - Sacred Sikh gurdwara in Amritsar"
+        id: "chess-3",
+        url: "https://ranjan.fyi/476627697_122132624222480136_5927713724276113555_n.jpg",
+        caption: "A game of kings, a battle of minds"
+      },
+      {
+        id: "chess-4",
+        url: "https://ranjan.fyi/Screenshot_20240619_132348_Chess.jpg",
+        caption: "Smothered Checkmate: When the endgame is both silent and deadly."
       }
+
     ],
-    thumbnailIndex: 0
+    thumbnailIndex: 3
   }
 ];
 
@@ -270,3 +282,22 @@ export const YOUTUBE_VIDEOS = [
     "https://www.youtube.com/embed/G7A0Dzz6o6Y?si=ZPkZoYqzc3_0vqnv",
     "https://www.youtube.com/embed/oKoFYpFUnO8?si=Gh1JmRaJaEMi14g7"
 ]
+
+
+export const PLACES_I_WENT = [
+  {
+    id: 1,
+    location: "Dubai",
+    category:"Rich people "
+  },
+  {
+    id: 2,
+    location: "India",
+    category:"Different people, different vibe. "
+  },
+  {
+    id: 3,
+    location: "Singapore",
+    category:"I like the hot air."
+  }
+];
