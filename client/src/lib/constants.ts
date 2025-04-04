@@ -1,6 +1,6 @@
 export const USER_INFO = {
-  name: "Adhish Ranjan",
-  fullName: "Adhish Ranjan",
+  name: "Ranjan",
+  fullName: "Ranjan Adhikari",
   tagline: "Traveler • Photographer • Story Teller",
   intro: "I share my adventures, photography, and stories from around the world. Join me as I explore new places and create unforgettable memories.",
   profileImage: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
@@ -20,7 +20,7 @@ export const USER_INFO = {
     facebook: "https://www.facebook.com/profile.php?id=100070361946323",
     twitter: "https://twitter.com/johndoe",
     instagram: "https://instagram.com/johndoe",
-    linkedin: "https://www.linkedin.com/in/adh-ranjan/"
+    linkedin: "https://www.linkedin.com/in/ranjan-adhikari/"
   }
 };
 
