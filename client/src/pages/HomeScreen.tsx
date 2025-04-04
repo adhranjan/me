@@ -44,37 +44,7 @@ const HomeScreen: React.FC = () => {
         <div className="text-xl text-white/80">
           {greeting}, {USER_INFO.name}
         </div>
-        
-        {/* Test button */}
-        <div className="mt-4 relative z-50">
-          <Button 
-            onClick={navigateToAbout}
-            className="bg-white text-primary hover:bg-white/90 font-bold"
-            style={{ padding: '12px 24px' }}
-          >
-            Open About App (Test)
-          </Button>
-        </div>
       </motion.div>
-      
-      {/* App navigation menu */}
-      <div className="relative z-50 px-4 mb-4">
-        <div className="bg-black/50 backdrop-blur-md p-3 rounded-xl">
-          <h3 className="text-white font-medium mb-2 text-center">Quick Navigation</h3>
-          <div className="grid grid-cols-3 gap-3">
-            {APPS.slice(0, 6).map((app) => (
-              <Button
-                key={app.id}
-                onClick={() => setLocation(`/app/${app.id}`)}
-                className="py-3"
-                style={{ backgroundColor: app.color }}
-              >
-                {app.name}
-              </Button>
-            ))}
-          </div>
-        </div>
-      </div>
       
       {/* App grid */}
       <div className="flex-grow flex flex-col justify-center">
