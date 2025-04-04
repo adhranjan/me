@@ -1,0 +1,48 @@
+Work History
+Software Development Engineer
+BookMyShow South East Asia
+(Transitioned from ASZ Technologies)
+2021-04 - Current Date
+Collaborated closely with the product team to gather requirements, ensuring alignment with business objectives and user needs.
+Implemented E-ticketing systems and performed data migration, ensuring a seamless transition between existing and new data structure.
+Optimized software performance, improving overall system efficiency across multiple services.
+Maintained and refactored codebases across microservices, ensuring scalability and maintainability of the system.
+Led countless hotfixes, ensuring quick resolution of critical issues during high-demand periods, always ready to assist in keeping the system operational.
+Collaborated with the SKIDATA team to lead the integration process, facilitating smooth ticket synchronization to Access Control Systems (ACS).
+Improved large seat SVG publishing across the inventory for better visual seat selection.
+Served as Scrum Master for effective team coordination.
+Software Consultant
+ASZ Technologies
+2019-11 - 2021-03
+Developed a module that allowed users to watch online streaming sessions, restricting access from multiple screens.
+Planned and built a suppressible E-ticket module enabling users to access tickets via the website.
+Coordinated with the product owner on development timelines and project scope.
+Backend Developer
+Leaf Innovation Pvt. Ltd
+2019-05 - 2019-11
+Developed a product that provides operation managers on demand.
+Created a search algorithm to find the best available rangers.
+Designed a notification module to send alerts to admins and rangers.
+Worked on architectural design to enhance system efficiency.
+Intern
+Zibtek
+2019-01 - 2019-04
+Participated in developing a sales product.
+Assisted in sprint planning activities to ensure timely delivery of project milestones.
+
+Junior Software Developer
+Proactive Web Developers
+2016-07 - 2018-12
+Developed web applications for monitoring projects of the House Building Unit, Government of Nepal.
+Developed frontend features using jQuery and Vue.js for various client-side functionalities.
+Created APIs for Android applications (Deaf Nepal NSL Learning).
+Designed databases and developed backend systems for the Ministry of Home Affairs website.
+Developed reporting systems for earthquake reconstruction (Central Level Project Implementation Unit, Grant Management, and Local Infrastructure).
+
+Education
+Master of Computer Applications
+VTU, Bangalore
+2017 - 2019
+Bachelor of Computer Information Systems
+Pokhara University, Apex College
+2011 - 2016

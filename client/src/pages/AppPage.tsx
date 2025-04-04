@@ -6,6 +6,7 @@ import { APPS, USER_INFO, GALLERY_ITEMS } from "@/lib/constants";
 import { User, Mail, MapPin, Image, FileText, Share2, Map } from "lucide-react";
 import LinkedInApp from "./apps/LinkedInApp";
 import FacebookApp from "./apps/FacebookApp";
+import GitApp from "./apps/GitApp";
 import { Button } from "@/components/ui/button";
 
 // About app content
@@ -582,6 +583,8 @@ const AppPage: React.FC = () => {
         return <ResumeApp />;
       case 'contact':
         return <ContactApp />;
+      case 'git':
+        return <GitApp />;
       case 'linkedin':
         return <LinkedInApp />;
       case 'facebook':
