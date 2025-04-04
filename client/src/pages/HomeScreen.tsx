@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "wouter";
-import { USER_INFO } from "@/lib/constants";
+import { USER_INFO, APPS } from "@/lib/constants";
 import { AppGrid } from "@/components/device/AppGrid";
 import { Wallpaper } from "@/components/device/Wallpaper";
 import { motion } from "framer-motion";
