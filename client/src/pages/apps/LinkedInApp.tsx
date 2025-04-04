@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { AppScreen } from "@/components/device/AppScreen";
 import { USER_INFO } from "@/lib/constants";
-import { motion } from "framer-motion";
-import { ArrowLeft, Linkedin } from "lucide-react";
+import { ArrowLeft, Linkedin, ExternalLink } from "lucide-react";
 import { useLocation } from "wouter";
 
 const LinkedInApp: React.FC = () => {
-  const [loading, setLoading] = useState(true);
   const [_, setLocation] = useLocation();
 
   const goBack = () => {
@@ -33,22 +31,24 @@ const LinkedInApp: React.FC = () => {
         </div>
 
         {/* LinkedIn Content */}
-        <div className="flex-grow relative overflow-hidden">
-          {loading && (
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 z-10">
-              <div className="w-12 h-12 rounded-full border-4 border-[#0A66C2] border-t-transparent animate-spin mb-4"></div>
-              <p className="text-gray-600">Loading profile...</p>
-            </div>
-          )}
-          
-          <iframe 
-            src={linkedinUrl}
-            className="w-full h-full border-none"
-            onLoad={() => setLoading(false)}
-            title="LinkedIn Profile"
-            sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-            referrerPolicy="no-referrer"
-          />
+        <div className="flex-grow flex items-center justify-center p-6 bg-gray-100">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
+            <Linkedin size={64} className="mx-auto mb-4 text-[#0A66C2]" />
+            <h2 className="text-2xl font-bold mb-2">LinkedIn Profile</h2>
+            <p className="text-gray-600 mb-6">
+              Due to security restrictions, LinkedIn doesn't allow embedding their site in iframes.
+            </p>
+            
+            <a 
+              href={linkedinUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-[#0A66C2] hover:bg-[#084e96] text-white px-6 py-3 rounded-md font-medium mx-auto"
+            >
+              <span>Visit LinkedIn Profile</span>
+              <ExternalLink size={16} />
+            </a>
+          </div>
         </div>
       </div>
     </AppScreen>
