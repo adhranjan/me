@@ -33,8 +33,6 @@ const LinkedInApp: React.FC = () => {
         {/* LinkedIn Content */}
         <div className="flex-grow flex items-center justify-center p-6 bg-gray-100">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <Linkedin size={64} className="mx-auto mb-4 text-[#0A66C2]" />
-            <h2 className="text-2xl font-bold mb-2">LinkedIn Profile</h2>
             <p className="text-gray-600 mb-6">
               Due to security restrictions, LinkedIn doesn't allow embedding their site in iframes.
             </p>
