@@ -17,7 +17,7 @@ export const USER_INFO = {
     years: "5+"
   },
   social: {
-    facebook: "https://facebook.com/johndoe",
+    facebook: "https://www.facebook.com/profile.php?id=100070361946323",
     twitter: "https://twitter.com/johndoe",
     instagram: "https://instagram.com/johndoe",
     linkedin: "https://www.linkedin.com/in/adh-ranjan/"
@@ -73,6 +73,13 @@ export const APPS = [
     icon: "Linkedin",
     color: "#0A66C2", // LinkedIn Blue
     description: "Visit my LinkedIn profile"
+  },
+  {
+    id: "facebook",
+    name: "Facebook",
+    icon: "Facebook",
+    color: "#1877F2", // Facebook Blue
+    description: "Visit my Facebook profile"
   }
 ];
 
