@@ -24,6 +24,51 @@ export const USER_INFO = {
   }
 };
 
+export const APPS = [
+  {
+    id: "about",
+    name: "About Me",
+    icon: "User",
+    color: "#4285F4", // Google Blue
+    description: "Learn about who I am and what I do"
+  },
+  {
+    id: "gallery",
+    name: "Gallery",
+    icon: "Image",
+    color: "#EA4335", // Google Red
+    description: "Browse through my travel photos"
+  },
+  {
+    id: "map",
+    name: "Travel Map",
+    icon: "Map",
+    color: "#FBBC05", // Google Yellow
+    description: "See the places I've visited"
+  },
+  {
+    id: "social",
+    name: "Connect",
+    icon: "Share2",
+    color: "#34A853", // Google Green
+    description: "Find me on social media"
+  },
+  {
+    id: "resume",
+    name: "Resume",
+    icon: "FileText",
+    color: "#9C27B0", // Purple
+    description: "View my professional experience"
+  },
+  {
+    id: "contact",
+    name: "Contact",
+    icon: "Mail",
+    color: "#FF5722", // Deep Orange
+    description: "Get in touch with me"
+  }
+];
+
 export const GALLERY_ITEMS = [
   {
     id: 1,
