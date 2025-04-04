@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "wouter";
 import { USER_INFO } from "@/lib/constants";
 import { AppGrid } from "@/components/device/AppGrid";
 import { Wallpaper } from "@/components/device/Wallpaper";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 const HomeScreen: React.FC = () => {
   const [greeting, setGreeting] = useState<string>("Hello");
+  const [_, setLocation] = useLocation();
   
   useEffect(() => {
     const hour = new Date().getHours();
@@ -17,6 +20,12 @@ const HomeScreen: React.FC = () => {
       setGreeting("Good evening");
     }
   }, []);
+  
+  // Test navigation function
+  const navigateToAbout = () => {
+    console.log("Navigating to about app");
+    setLocation("/app/about");
+  };
   
   return (
     <div className="relative h-full w-full flex flex-col">
@@ -34,6 +43,16 @@ const HomeScreen: React.FC = () => {
         </div>
         <div className="text-xl text-white/80">
           {greeting}, {USER_INFO.name}
+        </div>
+        
+        {/* Test button */}
+        <div className="mt-4">
+          <Button 
+            onClick={navigateToAbout}
+            className="bg-white text-primary hover:bg-white/90"
+          >
+            Open About App (Test)
+          </Button>
         </div>
       </motion.div>
       

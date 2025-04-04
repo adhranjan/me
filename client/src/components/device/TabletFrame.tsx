@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { StatusBar } from "./StatusBar";
-import { NavigationBar } from "./NavigationBar";
+import { StatusBar } from "@/components/device/StatusBar";
+import { NavigationBar } from "@/components/device/NavigationBar";
 
 interface TabletFrameProps {
   children: React.ReactNode;
