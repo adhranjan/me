@@ -125,5 +125,26 @@ export const GALLERY_ITEMS = [
     location: "New York, USA",
     category: "Americas",
     image: "https://images.unsplash.com/photo-1536768139911-e290a55908a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 7,
+    title: "Burj Khalifa",
+    location: "Dubai, UAE",
+    category: "Asia",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 8,
+    title: "Marina Bay",
+    location: "Singapore",
+    category: "Asia",
+    image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 9,
+    title: "Taj Mahal",
+    location: "Agra, India",
+    category: "Asia",
+    image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
   }
 ];
