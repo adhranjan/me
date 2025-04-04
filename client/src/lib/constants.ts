@@ -73,20 +73,6 @@ export const APPS = [
     icon: "Mail",
     color: "#FF5722", // Deep Orange
     description: "Get in touch with me"
-  },
-  {
-    id: "linkedin",
-    name: "LinkedIn",
-    icon: "Linkedin",
-    color: "#0A66C2", // LinkedIn Blue
-    description: "Visit my LinkedIn profile"
-  },
-  {
-    id: "facebook",
-    name: "Facebook",
-    icon: "Facebook",
-    color: "#1877F2", // Facebook Blue
-    description: "Visit my Facebook profile"
   }
 ];
 

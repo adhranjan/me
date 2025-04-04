@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import { AppScreen } from "@/components/device/AppScreen";
 import { APPS, USER_INFO, GALLERY_ITEMS } from "@/lib/constants";
 import { User, Mail, MapPin, Image, FileText, Share2, Map } from "lucide-react";
-import LinkedInApp from "./apps/LinkedInApp";
-import FacebookApp from "./apps/FacebookApp";
 import GitApp from "./apps/GitApp";
 import { Button } from "@/components/ui/button";
 
@@ -585,10 +583,6 @@ const AppPage: React.FC = () => {
         return <ContactApp />;
       case 'git':
         return <GitApp />;
-      case 'linkedin':
-        return <LinkedInApp />;
-      case 'facebook':
-        return <FacebookApp />;
       default:
         return <div className="p-6 text-center">App not found</div>;
     }
