@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { AppScreen } from "@/components/device/AppScreen";
 import { APPS, USER_INFO, GALLERY_ITEMS } from "@/lib/constants";
 import { User, Mail, MapPin, Image, FileText, Share2, Map } from "lucide-react";
+import LinkedInApp from "./apps/LinkedInApp";
 import { Button } from "@/components/ui/button";
 
 // About app content
@@ -580,6 +581,8 @@ const AppPage: React.FC = () => {
         return <ResumeApp />;
       case 'contact':
         return <ContactApp />;
+      case 'linkedin':
+        return <LinkedInApp />;
       default:
         return <div className="p-6 text-center">App not found</div>;
     }
