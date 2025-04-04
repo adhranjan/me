@@ -52,16 +52,8 @@ const AppIcon: React.FC<AppIconProps> = ({ app, index }) => {
   );
 };
 
-export const AppGrid: React.FC = () => {
-  const [_, setLocation] = useLocation();
-  
+export const AppGrid: React.FC = () => { 
   // Direct navigation functions for each app
-  const navigateToApp = (appId: string) => (e: React.MouseEvent) => {
-    e.preventDefault();
-    console.log("Direct navigation to:", appId);
-    setLocation(`/app/${appId}`);
-  };
-  
   return (
     <div className="p-8">     
       {/* Regular app grid */}

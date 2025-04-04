@@ -9,7 +9,7 @@ export const YoutubeApp: React.FC = () => {
           {YOUTUBE_VIDEOS.map((v)=>{
             return         (
               <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-700 hover:shadow-red-500/50 transition-shadow">
-              <iframe 
+              <iframe  title="v"
                 className="w-full aspect-video"
                 src= {v}
               ></iframe>

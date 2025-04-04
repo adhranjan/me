@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-
 import { GitBranch, GitCommit, Book, Briefcase, Calendar, ChevronDown, ChevronRight } from "lucide-react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@radix-ui/react-accordion";
-import { AppScreen } from "../../components/device/AppScreen";
 import { WORK_HISTORY, EDUCATION_HISTORY } from "../../lib/constants";
 import { Badge } from "../../components/ui/badge";
 
@@ -15,8 +13,6 @@ interface TimelineItemProps {
 }
 
 const TimelineItem: React.FC<TimelineItemProps> = ({ item, isLast }) => {
-  const [expanded, setExpanded] = useState(false);
-
   const getDateColor = () => {
     const date = new Date(item.commitDate);
     const year = date.getFullYear();
