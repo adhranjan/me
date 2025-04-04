@@ -86,62 +86,20 @@ export const APPS = [
 export const GALLERY_ITEMS = [
   {
     id: 1,
-    title: "Swiss Alps",
-    location: "Interlaken, Switzerland",
-    category: "Europe",
-    image: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 2,
-    title: "Venetian Canals",
-    location: "Venice, Italy",
-    category: "Europe",
-    image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 3,
-    title: "City Lights",
-    location: "Tokyo, Japan",
-    category: "Asia",
-    image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 4,
-    title: "White & Blue",
-    location: "Santorini, Greece",
-    category: "Europe",
-    image: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 5,
-    title: "Rice Terraces",
-    location: "Ubud, Bali",
-    category: "Asia",
-    image: "https://images.unsplash.com/photo-1605649461784-ebd54723baff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 6,
-    title: "Big Apple",
-    location: "New York, USA",
-    category: "Americas",
-    image: "https://images.unsplash.com/photo-1536768139911-e290a55908a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 7,
     title: "Burj Khalifa",
     location: "Dubai, UAE",
     category: "Asia",
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: 8,
+    id: 2,
     title: "Marina Bay",
     location: "Singapore",
     category: "Asia",
     image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: 9,
+    id: 3,
     title: "Taj Mahal",
     location: "Agra, India",
     category: "Asia",
