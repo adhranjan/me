@@ -79,24 +79,78 @@ export const APPS = [
 export const GALLERY_ITEMS = [
   {
     id: 1,
-    title: "Burj Khalifa",
+    title: "Dubai",
     location: "Dubai, UAE",
     category: "Asia",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    description: "A modern metropolis in the United Arab Emirates",
+    images: [
+      {
+        id: "dubai-1",
+        url: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+        caption: "Burj Khalifa - The tallest building in the world"
+      },
+      {
+        id: "dubai-2",
+        url: "https://images.unsplash.com/photo-1526495124232-a04e1849168c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+        caption: "Palm Jumeirah - Artificial archipelago"
+      },
+      {
+        id: "dubai-3",
+        url: "https://images.unsplash.com/photo-1582672752793-08d00be4b394?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+        caption: "Dubai Marina - Artificial canal city"
+      }
+    ],
+    thumbnailIndex: 0 // Use the first image as the thumbnail
   },
   {
     id: 2,
-    title: "Marina Bay",
+    title: "Singapore",
     location: "Singapore",
     category: "Asia",
-    image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    description: "A sovereign island city-state in Southeast Asia",
+    images: [
+      {
+        id: "singapore-1",
+        url: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+        caption: "Marina Bay Sands - Iconic integrated resort"
+      },
+      {
+        id: "singapore-2",
+        url: "https://images.unsplash.com/photo-1565967511849-76a60a516170?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+        caption: "Gardens by the Bay - Nature park in central Singapore"
+      },
+      {
+        id: "singapore-3",
+        url: "https://images.unsplash.com/photo-1566460414244-8918c41689de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+        caption: "Singapore Skyline - Financial district view"
+      }
+    ],
+    thumbnailIndex: 0
   },
   {
     id: 3,
-    title: "Taj Mahal",
+    title: "India",
     location: "Agra, India",
     category: "Asia",
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    description: "Home to one of the seven wonders of the world",
+    images: [
+      {
+        id: "india-1",
+        url: "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+        caption: "Taj Mahal - Iconic ivory-white marble mausoleum"
+      },
+      {
+        id: "india-2",
+        url: "https://images.unsplash.com/photo-1587135941948-670b381f08ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+        caption: "Hawa Mahal - Palace of Winds in Jaipur"
+      },
+      {
+        id: "india-3",
+        url: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+        caption: "Golden Temple - Sacred Sikh gurdwara in Amritsar"
+      }
+    ],
+    thumbnailIndex: 0
   }
 ];
 

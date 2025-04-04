@@ -60,8 +60,9 @@ const AboutApp: React.FC = () => {
 
 // Gallery app content
 const GalleryApp: React.FC = () => {
-  const [selectedImage, setSelectedImage] = React.useState<number | null>(null);
+  const [selectedLocation, setSelectedLocation] = React.useState<number | null>(null);
   const [activeCategory, setActiveCategory] = React.useState<string>("All");
+  const [currentImageIndex, setCurrentImageIndex] = React.useState<number>(0);
   
   const categories = ["All", ...Array.from(new Set(GALLERY_ITEMS.map(item => item.category)))];
   
@@ -69,6 +70,36 @@ const GalleryApp: React.FC = () => {
     ? GALLERY_ITEMS 
     : GALLERY_ITEMS.filter(item => item.category === activeCategory);
   
+  const handleLocationClick = (locationId: number) => {
+    setSelectedLocation(locationId);
+    setCurrentImageIndex(0); // Reset to first image when opening a new location
+  };
+  
+  const handleNextImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedLocation) {
+      const location = GALLERY_ITEMS.find(item => item.id === selectedLocation);
+      if (location && currentImageIndex < location.images.length - 1) {
+        setCurrentImageIndex(prevIndex => prevIndex + 1);
+      }
+    }
+  };
+  
+  const handlePrevImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedLocation && currentImageIndex > 0) {
+      setCurrentImageIndex(prevIndex => prevIndex - 1);
+    }
+  };
+  
+  const selectedLocationData = selectedLocation 
+    ? GALLERY_ITEMS.find(item => item.id === selectedLocation) 
+    : null;
+  
+  const currentImage = selectedLocationData 
+    ? selectedLocationData.images[currentImageIndex] 
+    : null;
+
   return (
     <div className="p-4">
       {/* Category filters */}
@@ -90,56 +121,122 @@ const GalleryApp: React.FC = () => {
         </div>
       </div>
       
-      {/* Image grid */}
-      <div className="grid grid-cols-2 gap-3">
+      {/* Location grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {filteredItems.map((item) => (
           <div 
             key={item.id} 
             className="overflow-hidden rounded-lg shadow-md transform transition-transform active:scale-95"
-            onClick={() => setSelectedImage(item.id)}
+            onClick={() => handleLocationClick(item.id)}
           >
             <div className="relative">
               <img 
-                src={item.image} 
+                src={item.images[item.thumbnailIndex].url} 
                 alt={item.title} 
                 className="w-full h-48 object-cover" 
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-2">
-                <p className="text-xs text-white/80">{item.category}</p>
+                <div className="flex items-center">
+                  <p className="text-xs text-white/80 mr-2">{item.category}</p>
+                  <p className="text-xs text-white/80 bg-black/30 px-1.5 py-0.5 rounded-full">{item.images.length} photos</p>
+                </div>
               </div>
             </div>
             <div className="p-3">
               <h3 className="font-medium">{item.title}</h3>
               <p className="text-sm text-gray-500">{item.location}</p>
+              <p className="text-xs text-gray-400 mt-1 line-clamp-2">{item.description}</p>
             </div>
           </div>
         ))}
       </div>
       
       {/* Image viewer modal */}
-      {selectedImage && (
+      {selectedLocation && currentImage && (
         <div 
-          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
+          onClick={() => setSelectedLocation(null)}
         >
-          <div className="relative max-w-lg w-full">
-            {GALLERY_ITEMS.find(item => item.id === selectedImage) && (
+          <div className="relative max-w-2xl w-full p-4">
+            <img 
+              src={currentImage.url} 
+              alt={currentImage.caption} 
+              className="w-full rounded-lg shadow-xl object-contain max-h-[70vh]"
+            />
+            
+            {/* Caption */}
+            <div className="absolute bottom-8 left-8 right-8 bg-black/50 backdrop-blur-sm p-4 rounded-lg">
+              <h3 className="text-white font-medium mb-1">
+                {selectedLocationData?.title}
+              </h3>
+              <p className="text-white/90 text-sm font-medium">
+                {currentImage.caption}
+              </p>
+              <p className="text-white/70 text-xs mt-1">
+                {selectedLocationData?.location} • {currentImageIndex + 1} of {selectedLocationData?.images.length}
+              </p>
+            </div>
+
+            {/* Navigation buttons */}
+            {selectedLocationData && selectedLocationData.images.length > 1 && (
               <>
-                <img 
-                  src={GALLERY_ITEMS.find(item => item.id === selectedImage)?.image} 
-                  alt={GALLERY_ITEMS.find(item => item.id === selectedImage)?.title}
-                  className="w-full rounded-lg shadow-xl"
-                />
-                <div className="absolute bottom-4 left-4 right-4 bg-black/50 backdrop-blur-sm p-3 rounded-lg">
-                  <h3 className="text-white font-medium">
-                    {GALLERY_ITEMS.find(item => item.id === selectedImage)?.title}
-                  </h3>
-                  <p className="text-white/70 text-sm">
-                    {GALLERY_ITEMS.find(item => item.id === selectedImage)?.location} - 
-                    {GALLERY_ITEMS.find(item => item.id === selectedImage)?.category}
-                  </p>
-                </div>
+                {currentImageIndex > 0 && (
+                  <button 
+                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 rounded-full p-2 text-white transition-colors"
+                    onClick={handlePrevImage}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                  </button>
+                )}
+                
+                {currentImageIndex < selectedLocationData.images.length - 1 && (
+                  <button 
+                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 rounded-full p-2 text-white transition-colors"
+                    onClick={handleNextImage}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
+                  </button>
+                )}
               </>
+            )}
+            
+            {/* Close button */}
+            <button 
+              className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 rounded-full p-2 text-white transition-colors"
+              onClick={() => setSelectedLocation(null)}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            
+            {/* Image thumbnails */}
+            {selectedLocationData && selectedLocationData.images.length > 1 && (
+              <div className="flex justify-center mt-4 gap-2">
+                {selectedLocationData.images.map((image, index) => (
+                  <button
+                    key={image.id}
+                    className={`w-12 h-12 rounded-md overflow-hidden border-2 transition-all ${
+                      index === currentImageIndex ? 'border-white scale-110' : 'border-transparent opacity-70'
+                    }`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setCurrentImageIndex(index);
+                    }}
+                  >
+                    <img 
+                      src={image.url} 
+                      alt={`Thumbnail ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
             )}
           </div>
         </div>
