@@ -5,7 +5,7 @@ export const USER_INFO = {
   intro: "I share my adventures, photography, and stories from around the world. Join me as I explore new places and create unforgettable memories.",
   profileImage: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
   location: "San Francisco, CA",
-  email: "hello@johndoe.com",
+  email: "adh.ranjan@gmail.com",
   aboutParagraph1: "Hello! I'm a passionate traveler and photographer based in San Francisco, California. For the past 5 years, I've been documenting my journeys across 30+ countries, capturing moments and sharing stories that inspire others to explore the world.",
   aboutParagraph2: "When I'm not traveling, I work as a freelance photographer and content creator. My work has been featured in several travel magazines and blogs. I believe in sustainable travel and always try to leave a positive impact on the places I visit.",
   aboutParagraph3: "Through this website, I share my experiences, photography tips, and travel guides to help fellow travelers plan their adventures. Feel free to reach out if you have questions or just want to connect!",
