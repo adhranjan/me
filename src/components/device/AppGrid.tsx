@@ -64,23 +64,7 @@ export const AppGrid: React.FC = () => {
   };
   
   return (
-    <div className="p-8">
-      {/* Explicit navigation buttons */}
-      <div className="grid grid-cols-2 gap-4 mb-8">
-        <Button 
-          onClick={navigateToApp('about')}
-          className="py-6 text-lg font-bold bg-blue-600 hover:bg-blue-700"
-        >
-          About Me
-        </Button>
-        <Button 
-          onClick={navigateToApp('gallery')}
-          className="py-6 text-lg font-bold bg-red-600 hover:bg-red-700"
-        >
-          Gallery
-        </Button>
-      </div>
-      
+    <div className="p-8">     
       {/* Regular app grid */}
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8">
         {APPS.map((app, index) => (

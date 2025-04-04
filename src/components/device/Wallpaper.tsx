@@ -15,48 +15,7 @@ export const Wallpaper: React.FC = () => {
           `,
         }}
       />
-      
-      {/* Arthur Morgan silhouette */}
-      <div className="absolute right-[10%] bottom-[15%] h-[50%] w-[30%] opacity-90">
-        <svg 
-          viewBox="0 0 300 500" 
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-full w-full"
-        >
-          {/* Gradient for silhouette */}
-          <defs>
-            <linearGradient id="arthurGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="rgba(30, 10, 5, 0.9)" />
-              <stop offset="100%" stopColor="rgba(0, 0, 0, 1)" />
-            </linearGradient>
-          </defs>
-          
-          {/* Arthur Morgan silhouette */}
-          <g fill="url(#arthurGradient)">
-            {/* Hat */}
-            <path d="M100,50 C120,40 180,40 200,50 L210,65 C215,70 220,75 225,80 L220,100 C215,105 200,110 190,100 C180,105 170,110 160,110 C150,110 140,105 130,100 C120,110 105,105 100,100 L95,80 C100,75 105,70 110,65 L100,50 Z" />
             
-            {/* Face and neck */}
-            <path d="M130,100 C135,105 145,110 150,110 C155,110 165,105 170,100 L175,130 C173,135 172,140 170,145 C168,150 165,160 160,165 C155,160 152,150 150,145 C148,140 147,135 145,130 L130,100 Z" />
-            
-            {/* Body and coat */}
-            <path d="M120,145 L110,160 L100,200 L95,250 L90,300 L95,350 L100,400 L105,410 C110,420 120,430 130,440 L140,450 L150,455 L155,460 L160,450 L170,440 C180,430 190,420 195,410 L200,400 L205,350 L210,300 L205,250 L200,200 L190,160 L180,145 C170,150 160,155 150,155 C140,155 130,150 120,145 Z" />
-            
-            {/* Arms and gun belt */}
-            <path d="M110,160 L90,180 L70,220 L65,250 L70,280 L90,300 L100,310 L105,300 L100,270 L105,250 L100,220 L110,200 L120,180 L110,160 Z" />
-            <path d="M190,160 L210,180 L230,220 L235,250 L230,280 L210,300 L200,310 L195,300 L200,270 L195,250 L200,220 L190,200 L180,180 L190,160 Z" />
-            <path d="M100,250 L110,260 L150,265 L190,260 L200,250 L190,240 L150,235 L110,240 L100,250 Z" />
-            
-            {/* Belt and Gun */}
-            <path d="M185,280 L220,290 L230,285 L235,280 L230,275 L220,270 L185,275 L180,280 L185,280 Z" />
-            
-            {/* Legs */}
-            <path d="M130,440 L125,460 L120,480 L115,500 L135,500 L140,480 L145,460 L140,450 L130,440 Z" />
-            <path d="M170,440 L175,460 L180,480 L185,500 L165,500 L160,480 L155,460 L160,450 L170,440 Z" />
-          </g>
-        </svg>
-      </div>
-      
       {/* Western landscape silhouette */}
       <div className="absolute inset-x-0 bottom-0 h-[40%] opacity-80">
         <svg

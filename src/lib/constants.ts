@@ -82,7 +82,7 @@ export const GALLERY_ITEMS = [
     id: 1,
     title: "Dubai",
     location: "Dubai, UAE",
-    category: "Asia",
+    category: "Eupore",
     description: "A modern metropolis in the United Arab Emirates",
     images: [
       {
