@@ -2,7 +2,7 @@ import React from "react";
 
 export const Wallpaper: React.FC = () => {
   return (
-    <div className="absolute inset-0 z-0 overflow-hidden">
+    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
       {/* Gradient Background */}
       <div 
         className="absolute inset-0 bg-gradient-to-br from-black to-primary/30"
