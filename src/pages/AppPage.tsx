@@ -1,11 +1,12 @@
 import React from "react";
 import { useParams } from "wouter";
 import { motion } from "framer-motion";
-import { User, Mail, MapPin, Image, FileText, Share2, Map } from "lucide-react";
+import {Mail, MapPin, Share2 } from "lucide-react";
 import GitApp from "./apps/GitApp";
 import { AppScreen } from "../components/device/AppScreen";
 import { USER_INFO, GALLERY_ITEMS } from "../lib/constants";
 import { Button } from "../components/ui/button";
+import YoutubeApp from "./apps/YoutubeApp";
 
 // About app content
 const AboutApp: React.FC = () => {
@@ -680,6 +681,8 @@ const AppPage: React.FC = () => {
         return <ContactApp />;
       case 'git':
         return <GitApp />;
+      case 'youtube':
+        return <YoutubeApp  />;  
       default:
         return <div className="p-6 text-center">App not found</div>;
     }

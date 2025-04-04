@@ -143,7 +143,6 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({ title, icon, items })
 
 export const GitApp: React.FC = () => {
   return (
-    <AppScreen appId="git">
       <div className="p-4 bg-gray-50 min-h-screen">
         <div className="max-w-3xl mx-auto">
           <div className="bg-white p-6 rounded-lg shadow-sm mb-6">
@@ -181,7 +180,6 @@ export const GitApp: React.FC = () => {
           </div>
         </div>
       </div>
-    </AppScreen>
   );
 };
 

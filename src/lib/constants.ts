@@ -73,6 +73,13 @@ export const APPS = [
     icon: "Mail",
     color: "#FF5722", // Deep Orange
     description: "Get in touch with me"
+  },
+  {
+    id: "youtube",
+    name: "Youtube",
+    icon: "Youtube",
+    color: "#FF0000", // Deep Orange
+    description: "Get in touch with me"
   }
 ];
 
@@ -257,3 +264,9 @@ export const EDUCATION_HISTORY = [
     commitDate: "2011-01-01"
   }
 ];
+
+
+export const YOUTUBE_VIDEOS = [
+    "https://www.youtube.com/embed/G7A0Dzz6o6Y?si=ZPkZoYqzc3_0vqnv",
+    "https://www.youtube.com/embed/oKoFYpFUnO8?si=Gh1JmRaJaEMi14g7"
+]
