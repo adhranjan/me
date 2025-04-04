@@ -22,11 +22,6 @@ const HomeScreen: React.FC = () => {
   }, []);
   
   // Test navigation function
-  const navigateToAbout = () => {
-    console.log("Navigating to about app");
-    setLocation("/app/about");
-  };
-  
   return (
     <div className="relative h-full w-full flex flex-col">
       <Wallpaper />
