@@ -37,7 +37,7 @@ const HomeScreen: React.FC = () => {
           {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
         </div>
         <div className="text-xl text-white/80">
-          {greeting}, {USER_INFO.name}
+          {greeting}, From {USER_INFO.name}
         </div>
       </motion.div>
       
