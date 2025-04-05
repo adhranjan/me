@@ -14,7 +14,7 @@ export const TabletFrame: React.FC<TabletFrameProps> = ({ children }) => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="relative max-w-4xl w-full aspect-[4/3] bg-black rounded-[40px] shadow-2xl overflow-hidden border-[12px] border-gray-800"
+        className="relative max-w-7xl w-full aspect-[4/3] bg-black rounded-[40px] shadow-2xl overflow-hidden border-[12px] border-gray-800"
       >
         {/* Camera and sensors */}
         <div className="absolute top-3 left-1/2 transform -translate-x-1/2 flex items-center z-10">

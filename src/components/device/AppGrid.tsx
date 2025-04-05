@@ -57,7 +57,7 @@ export const AppGrid: React.FC = () => {
   return (
     <div className="p-8">     
       {/* Regular app grid */}
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-8 gap-8">
         {APPS.map((app, index) => (
           <AppIcon key={app.id} app={app} index={index} />
         ))}
