@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { USER_INFO } from "../../lib/constants";
 
 interface BootLoaderProps {
   onComplete: () => void;
@@ -14,7 +13,7 @@ const bootSequence = [
   "Configuring network interfaces...",
   "Scanning for applications...",
   "Preparing home screen...",
-  `Welcome, ${USER_INFO.name}!`
+  `Welcome to ranjan.fyi`
 ];
 
 export const BootLoader: React.FC<BootLoaderProps> = ({ onComplete }) => {
@@ -46,7 +45,7 @@ export const BootLoader: React.FC<BootLoaderProps> = ({ onComplete }) => {
     <AnimatePresence>
       {!completed ? (
         <motion.div
-          className="absolute inset-0 bg-black flex flex-col items-center justify-center z-50"
+          className="absolute inset-0 bg-black os-text flex flex-col items-center justify-center z-50"
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6 }}
         >
@@ -57,14 +56,14 @@ export const BootLoader: React.FC<BootLoaderProps> = ({ onComplete }) => {
                 animate={{ opacity: 1 }}
                 className="text-4xl font-bold text-center mb-2"
               >
-                {USER_INFO.name} OS
+                Petit Four OS
               </motion.div>
               <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, transition: { delay: 0.3 } }}
                 className="text-sm text-center text-primary/70"
               >
-                v1.0.0
+                Android 1.1
               </motion.div>
             </div>
             

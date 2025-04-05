@@ -65,4 +65,8 @@
     margin-left: 2px;
     animation: blink 1s infinite;
   }
+
+  .os-text{
+    color: #008000 !important;
+  }
 }
